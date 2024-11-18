@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transport Sacco Receipt</title>
+<link rel="stylesheet" href="transport.css">
+</head>
+<body>
+    
+    <hr>
+    <h2>ELDORET CROSSROAD SACCO</h2>
+    <hr>
+    <form id="receiptForm">
+        <q>Report on any violation from our employees</q>
+    <div>
+        <label for="phone">Nairobi:</label>
+        <input type="number" id="phone" required maxlength="10"><br><br>
+    </div>
+
+    <div>
+        <label for="phonex">Nakuru:</label>
+        <input type="number" id="phone" required><br><br>
+    </div>
+
+    <div>
+        <label for="phoney">Eldoret:</label>
+        <input type="number" id="phone" required><br><br>
+    </div>
+
+    <div>
+        <label for="phonez">Kitale:</label>
+        <input type="number" id="phone" required><br><br>
+    </div>
+
+    <div>
+        <label for="phones">Kabarnet:</label>
+        <input type="number" id="phone" required><br><hr><br>
+    </div>
+
+    <div>
+        <label for="TicketNo">TicketNo</label>
+        <input type="number" id="TicketNo" required><br><br>
+    </div>
+    
+    <div>
+        <label for="date">Date:</label>
+        <input type="datetime-local" id="date" required><br><br>
+    </div>
+
+    <div>
+        <label for="Departure">Departure:</label>
+        <input type="text" id="Departure" required><br><br>
+    </div>
+
+    <div>
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" required><br><br>
+    </div>
+
+    <div>
+        <label for="Vehicle">Vehicle:</label>
+        <input type="text" id="Vehicle" required><br><br>
+    </div>
+
+    <div>
+        <label for="SeatNo">SeatNo:</label>
+        <input type="number" id="SeatNo" required><br><br>
+    </div>
+
+    <div>
+        <label for="fare">Fare:</label>
+        <input type="number" id="fare" required><br><br>
+    </div>
+
+    <div>
+        <label for="PassName">PassName:</label>
+        <input type="text" id="PassName" required><br><br>
+    </div>
+
+    <div>
+        <label for="PassPhone">PassPhone:</label>
+        <input type="number" id="PassPhone" required><br><br>
+    </div>
+
+    <div>
+        <label for="ServedBy">ServedBy:</label>
+        <input type="text" id="ServedBy" required><br><br>
+    </div>
+        <button type="button" onclick="generateReceipt()">Generate Receipt</button>
+    </form>
+    
+    <h3>Receipt:</h3>
+    <div id="receipt" class="receipt-container"></div>
+    
+    <script>
+        function generateReceipt() {
+            var phone = document.getElementById("phone").value;
+            var phone = document.getElementById("phone").value;
+            var phone = document.getElementById("phone").value;
+            var phone = document.getElementById("phone").value;
+            var phone = document.getElementById("phone").value;
+            let TicketNo = document.getElementById("TicketNo").value;
+            let date = document.getElementById("date").value;
+            let Departure = document.getElementById("Departure").value;
+            let destination = document.getElementById("destination").value;
+            let Vehicle = document.getElementById("Vehicle").value;
+            let SeatNo = document.getElementById("SeatNo").value;
+            let Fare = document.getElementById("fare").value;
+            let PassName = document.getElementById("PassName").value;
+            let PassPhone = document.getElementById("PassPhone").value;
+            let ServedBy = document.getElementById("ServedBy").value;
+            
+            let receipt = `
+            <hr>
+            <h2>ELDORET CROSSROAD SACCO:</h2>
+            <hr>
+                <p><strong>Nairobi:</strong> ${phone}</p>
+                <p><strong>Nakuru:</strong> ${phone}</p>
+                <p><strong>Eldoret:</strong> ${phone}</p>
+                <p><strong>Kitale:</strong> ${phone}</p>
+                <p><strong>Kabarnet:</strong> $${phone}</p>
+                <hr>
+                <p><strong>TicketNo:</strong> ${TicketNo}</p>
+                <p><strong>Date:</strong> ${date}</p>
+                <p><strong>Departure:</strong> ${Departure}</p>
+                <p><strong>Destination:</strong> ${destination}</p>
+                <p><strong>Vehicle:</strong> $${Vehicle}</p>
+                <p><strong>SeatNo:</strong> $${SeatNo}</p>
+                <p><strong>Fare:</strong> ${fare}</p>
+                <p><strong>PassName:</strong> ${PassName}</p>
+                <p><strong>PassPhone:</strong> ${PassPhone}</p>
+                <p><strong>ServedBy:</strong> ${ServedBy}</p>
+                   <q>Report on any violation from our employees</q>
+                <q>Welcome..safe journeys</q>
+
+                
+            `;
+            
+            document.getElementById("receipt").innerHTML = receipt;
+        }
+    </script>
+</body>
+</html>

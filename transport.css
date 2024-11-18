@@ -1,0 +1,71 @@
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    place-items: center;
+
+}
+
+form
+{
+display:table;
+margin: 0 auto;
+}
+form div
+{
+display: table-row;
+}
+form label,form input
+{
+display: table-cell;
+margin-bottom: ;
+}
+form label
+{
+width: 20%;
+padding-right: 5%;
+text-align: right;
+
+}
+form input
+{
+width: 70%;
+}
+form q
+{
+display: table-caption;
+caption-side: bottom;
+width:300px;
+color:#999;
+font-style: italic;
+}
+
+.receiptForm
+{
+    place-items: center;
+}
+.receipt-container
+{
+    margin-left: 5%;
+    border: 2px solid #fcc;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    width: 300px;
+    border-radius: 5px;
+}
+.receipt-container p
+ { 
+    margin: 5px 0;
+ } 
+.receipt-container strong 
+{ 
+    display: inline-block; width: 120px; 
+}
+.receipt-container q
+{
+display: table-caption;
+caption-side: bottom;
+width:300px;
+color:#999;
+font-style: italic;
+
