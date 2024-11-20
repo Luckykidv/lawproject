@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Law department gallery</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: rgb(211, 184, 148);
+}
+
+header {
+    background: hsl(118, 84%, 48%);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+#expandedImg{
+  margin-left: 15%;
+}
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: rgb(17, 16, 16);
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>Law Department Photo Gallery</h1>
+    <p>Explore photos of our activities and highlights.</p>
+</header>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="WhatsApp Image 2024-11-18 at 13.50.11_0ef4c61d.jpg" alt="Staff members" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="WhatsApp Image 2024-11-18 at 13.50.07_5bb64695.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="WhatsApp Image 2024-11-18 at 13.50.08_1d5c289a.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="WhatsApp Image 2024-11-18 at 13.50.08_208a606b.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="WhatsApp Image 2024-11-18 at 13.50.10_0808d379.jpg" alt="Landmark" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="WhatsApp Image 2024-11-18 at 13.50.08_305c3b1e.jpg" alt="Graduates" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="WhatsApp Image 2024-11-18 at 13.50.10_d96d138e.jpg" alt="Egerton gate" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="WhatsApp Image 2024-11-18 at 13.50.11_352a8a4e.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:60%">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>
