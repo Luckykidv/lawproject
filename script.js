@@ -68,7 +68,7 @@ function showSlides(n) {
 //   });
 // }
 function openNav() {
-  document.getElementById("myNav").style.width = "20%";
+  document.getElementById("myNav").style.width = "25%";
 }
 
 function closeNav() {
