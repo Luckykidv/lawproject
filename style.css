@@ -53,10 +53,10 @@ nav a:hover {
 }
 
 
-.about, .programs:{
+/* .about, .programs:{
     padding: 50px;
     margin: 2%;
-}
+} */
  .programs:hover {
   background-color: #04aa2e;
   cursor: alias;
@@ -220,14 +220,14 @@ input[type=text], input[type=password] {
   a:hover    {color:black}
   a:active   {color:blue}
 
-  .about q {
+/*   .about q {
     padding:;
-  }
-
+  } */
+/* 
 .programs ul li {
   padding-left:;
   /* text-align: center; */
-}
+} */
 
 .fa-caret-down {
   float: right;
@@ -266,12 +266,12 @@ input[type=text], input[type=password] {
   position: relative;
   margin-inline-start: 0.3rem;
 }
-input{
+/* input{
   display: none;
   visibility: hidden;
   -webkit-appearance: none;
 
-}
+} */
 .toggle
 {
   position: absolute;
@@ -330,7 +330,7 @@ input:checked ~ .slide{
 }
 
 
-}
+
 .overlay {
   height: 100%;
   width: 0;
